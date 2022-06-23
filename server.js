@@ -8,14 +8,14 @@ const PORT = process.env.PORT || 8000
 let db,
     dbConnectionString = process.env.DB_STRING,
     dbName = 'shrinkflation-list-api',
-    collection 
+    //collection 
 
 MongoClient.connect(dbConnectionString)
-.then(client => {
-    console.log(`Connected to ${dbName} database`)
-    db = client.db(dbName)
-    collection = db.collection('items-list')
-})
+    .then(client => {
+        console.log(`Connected to ${dbName} database`)
+        db = client.db(dbName)
+        //collection = db.collection('items-list')
+    })
 
 //middleware
 app.set('view engine', 'ejs')
