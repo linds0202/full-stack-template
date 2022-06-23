@@ -95,5 +95,5 @@ app.delete('/deleteEntry', (req, res) => {
 
 
 app.listen(process.env.PORT || PORT, () => {
-    console.log(`Server is running on port ${PORT}`)
+    //console.log(`Server is running on port ${PORT}`)
 })
