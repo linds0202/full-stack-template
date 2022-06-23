@@ -14,7 +14,7 @@ MongoClient.connect(dbConnectionString)
 .then(client => {
     console.log(`Connected to ${dbName} database`)
     db = client.db(dbName)
-    //collection = db.collection('items-list')
+    collection = db.collection('items-list')
 })
 
 //middleware
