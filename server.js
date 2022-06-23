@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8000
 
 let db,
     dbConnectionString = process.env.DB_STRING,
-    dbName = 'shrinkflation-list-api',
+    dbName = 'shrinkflation-list-api'
     //collection 
 
 MongoClient.connect(dbConnectionString)
