@@ -26,7 +26,13 @@ app.use(cors())
 
 app.get('/', async (req, res) => {
     try {
-         res.render('index.ejs')
+        db.collection('items-list').find().toArray()
+        .then(data => {
+            let nameList = data.map(item => item.itemName)
+            console.log(nameList)
+            res.render('index.ejs', {info: nameList})
+        })
+         //res.render('index.ejs')
     } catch (error) {
         res.status(500).send({message: error.message})
     }
